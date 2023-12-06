@@ -7,16 +7,15 @@ function NavBar(props) {
             <div className="columns ">
                 <div className="column is-4"> 
                     <figure>
-                    <img src={img} alt="Logo"/>
+                    <img className="image is-128x128 ml-4" src={img} alt="Logo"/>
                     </figure>
-                    <h2>Las sucus de sil</h2>
                </div>
                <div className="column is-flex is-align-items-center">
-                <button className="button is-danger  is-rounded mr-2">Plantas</button>
-                <button className="button is-danger  is-rounded mr-2">Macetas</button>
-                <button className="button is-danger  is-rounded mr-2">Contacto</button>
+                <button className="button is-danger  is-rounded mr-6">Plantas</button>
+                <button className="button is-danger  is-rounded mr-6">Centros de mesas</button>
+                <button className="button is-danger  is-rounded mr-6">Contacto</button>
                 </div>
-                <div className="column is-flex is-align-items-center">
+                <div className="column is-flex is-align-items-center ml-4">
                     <CartWiget/>
                 </div>
 
