@@ -39,7 +39,7 @@ const productos = [
     },
     {
         id:"8",
-        nombre:"Centro de mesa de madera",
+        nombre:"Centro de mesa madera",
         precio:2500,
         categoria:"centro de mesas",
         img:"./img/img-centromesa-4.jpeg",
@@ -63,6 +63,14 @@ export const getProductos = ()=>{
         setTimeout(() =>{
             resolve(productos)
         }, 2000)
+    })
+}
+
+export const getProductosById = (ProductosId)=>{
+    return new Promise((resolve)=>{
+        setTimeout(()=>{
+            resolve(productos.find(prod => prod.id === ProductosId))
+        }, 1000)
     })
 }
 

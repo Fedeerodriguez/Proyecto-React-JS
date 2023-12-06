@@ -1,0 +1,40 @@
+
+
+.Card{
+    width: 600px;
+    height: auto;
+}
+
+.itemFooter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.controls{
+    margin-bottom: 8px;
+    
+}
+
+.button{
+    display: inline-block;
+    padding: 10px;
+    color: white;
+    border: 1px solid red;
+    background-color: red;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.button:hover{
+    background: rgb(241, 79, 79);
+    color: #fff;
+    cursor: pointer;
+}
+
+.number{
+    background-color: #ebeca5bd;
+    font-weight: 500;
+    
+}
