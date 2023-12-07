@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import CartWiget from "../CartWidget/CartWidget"
 
 function NavBar(props) {
@@ -7,7 +8,10 @@ function NavBar(props) {
             <div className="columns ">
                 <div className="column is-4"> 
                     <figure>
-                    <img className="image is-128x128 ml-4" src={img} alt="Logo"/>
+                        <Link to="/">
+                            <img className="image is-128x128 ml-4" src={img} alt="Logo"/>  
+                        </Link>
+                    
                     </figure>
                </div>
                <div className="column is-flex is-align-items-center">
