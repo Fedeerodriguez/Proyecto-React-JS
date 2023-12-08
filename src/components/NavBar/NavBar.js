@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, NavLink } from "react-router-dom"
 import CartWiget from "../CartWidget/CartWidget"
 
 function NavBar(props) {
@@ -15,9 +15,9 @@ function NavBar(props) {
                     </figure>
                </div>
                <div className="column is-flex is-align-items-center">
-                <button className="button is-danger  is-rounded mr-6">Plantas</button>
-                <button className="button is-danger  is-rounded mr-6">Centros de mesas</button>
-                <button className="button is-danger  is-rounded mr-6">Contacto</button>
+                <NavLink to={`/categoria/plantas`} className="button is-danger  is-rounded mr-6">Plantas</NavLink>
+                <NavLink to={`/categoria/centro de mesas`} className="button is-danger  is-rounded mr-6">Centros de mesas</NavLink>
+                <NavLink to={`/categoria/contacto`} className="button is-danger  is-rounded mr-6">Contacto</NavLink>
                 </div>
                 <div className="column is-flex is-align-items-center ml-4">
                     <CartWiget/>

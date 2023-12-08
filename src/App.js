@@ -10,18 +10,13 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        <div>
-          <NavBar img={Logoimg} />
-        </div>
+        <NavBar img={Logoimg} />
         <Routes>
           <Route path='/' element={<ItemListContainer/>}/>
-          <Route path=''/>
+          <Route path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
           <Route path='/Item/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='*' element={<h1>Error 404</h1>}/>
-
         </Routes>
-
-
       </BrowserRouter>
 
     </div>
