@@ -1,8 +1,9 @@
 
 
 .Card{
-    width: 600px;
+    width: 500px;
     height: auto;
+    
 }
 
 .itemFooter{
@@ -14,27 +15,36 @@
 
 .controls{
     margin-bottom: 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+
     
 }
+picture img{
+   /*  height: 50%; */
+}
+
 
 .button{
     display: inline-block;
     padding: 10px;
     color: white;
     border: 1px solid red;
-    background-color: red;
+    background-color: hsl(348, 100%, 61%);
     border-radius: 4px;
     text-decoration: none;
 }
 
 .button:hover{
-    background: rgb(241, 79, 79);
+    background: hsl(348, 54%, 22%);
     color: #fff;
     cursor: pointer;
 }
 
-.number{
-    background-color: #ebeca5bd;
-    font-weight: 500;
+.controls h3{
+    margin-left: 40px;
+    margin-right: 40px;
     
 }

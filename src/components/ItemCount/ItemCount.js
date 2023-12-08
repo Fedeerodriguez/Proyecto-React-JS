@@ -23,7 +23,7 @@ function ItemCount({stock, initial, onAdd}) {
         <div className="counter">
             <div className="controls">
                 <button className="button" onClick={decremento}>-</button>
-                <h3 className="number">{cantidad}</h3>
+                <h3>{cantidad}</h3>
                 <button className="button" onClick={incremento}>+</button>
             </div>
             <div>
