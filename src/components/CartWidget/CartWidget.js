@@ -1,9 +1,16 @@
 import { GrCart } from "react-icons/gr"
-function CartWiget() {
+import { useContext } from "react"
+import { CartContext } from "../Context/CartContext"
+import { Link } from "react-router-dom"
+
+const CartWiget =() => {
+    const { totalCantidad }= useContext(CartContext)
     return (
         <div>
-            <GrCart/>
-            2
+            <Link to="/cart" style={{display: totalCantidad > 0 ? "block" : "none"}}>
+                 <GrCart/>
+                 {totalCantidad}
+            </Link>
         </div>
     )
     
