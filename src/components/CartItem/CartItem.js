@@ -12,6 +12,9 @@ const CartItem = ({ item }) =>{
                 <h2>
                     {item.nombre}
                 </h2>
+                <picture>
+                <img src={item.img} alt={item.nombre} />
+                </picture>  
                 <p>
                     Cantidad: {item.cantidad}
                 </p>

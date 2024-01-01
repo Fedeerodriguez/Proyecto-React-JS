@@ -9,7 +9,7 @@ const CartWiget =() => {
         <div>
             <Link to="/cart" >
                  <GrCart/>
-                 {totalCantidad}
+                 { totalCantidad() }
             </Link>
         </div>
     )

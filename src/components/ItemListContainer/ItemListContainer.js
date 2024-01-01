@@ -1,22 +1,36 @@
 import { useEffect , useState } from "react"
-import { getProductos, getProductosByCategoria } from "../AsyncMock/AsyncMock"
 import ItemList from "../ItemList/ItemList"
 import { useParams } from "react-router-dom"
+import { getDocs, collection, query, where } from "firebase/firestore"
+import { db} from "../config/firebaseConfig"
 
 
 const ItemListContainer = ({ mensaje }) => {
     const [productos, setProductos] = useState([])
+    const [ cargando, setCargando ] = useState(true)
 
     const {categoriaId}= useParams()
 
     useEffect(() =>{
-        const asyncFunc = categoriaId ? getProductosByCategoria : getProductos
-        asyncFunc(categoriaId)
-            .then(Response =>{
-                setProductos(Response)
+        setCargando(true)
+
+        const collectionRef = categoriaId
+            ? query(collection(db, "Items"),where("categoria", "==",categoriaId ))
+            : collection(db, "Items")
+
+        getDocs(collectionRef)
+            .then(Response=>{
+                const productosAdaptados = Response.docs.map(doc=>{
+                    const data = doc.data()
+                    return { id:doc.id, ...data }
+                })
+                setProductos(productosAdaptados)
             })
-            .catch(error =>{
+            .catch(error=>{
                 console.log(error)
+            })
+            .finally(()=>{
+                setCargando(false)
             })
     }, [categoriaId])
 
