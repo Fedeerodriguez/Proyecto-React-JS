@@ -7,6 +7,7 @@ import "bulma/css/bulma.css"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CardPovider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
+import Checkout from './components/Checkout/checkout';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
           <Route path='/Item/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
+          <Route path='/checkout' element={<Checkout/>}/>
           <Route path='*' element={<h1>Error 404</h1>}/>
         </Routes>
         </CardPovider>
