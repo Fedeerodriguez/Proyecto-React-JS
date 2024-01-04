@@ -1,4 +1,4 @@
-
+import "./Cart.css"
 import { useContext } from "react";
 import { CartContext } from "../Context/CartContext";
 import CartItem from "../CartItem/CartItem"
@@ -18,7 +18,7 @@ const Cart = () =>{
     }
 
     return(
-        <div>
+        <div className="cart">
             {cart.map(item => <CartItem key={item.id} item={item}/>)}
             <h3>Total: ${totalPrecio()}</h3>
             <button onClick={()=> clearCart()} className="button" > Limpiar carrito </button>

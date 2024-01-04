@@ -45,7 +45,7 @@ const Checkout = () =>{
                 const prodCantidad = productoAgregadoAlCarrito?.prodCantidad
                 if(stockDb >= prodCantidad ){
                     batch.update(doc.ref,{stock : stockDb - prodCantidad })
-                }else{
+                }else {
                     outOfStock.push({ id: doc.id, ...dataDoc })
                 }
             })
@@ -53,7 +53,7 @@ const Checkout = () =>{
             if(outOfStock.length === 0 ){
                 await batch.commit()
 
-                const ordenRef = collection(db,"orden")
+                const ordenRef = collection(db, "orden")
                 const orderAdded = await addDoc(ordenRef, objOrden)
 
                 setOrdenId(orderAdded.id)
@@ -62,11 +62,9 @@ const Checkout = () =>{
                 console.error("hay productos fuera de stock")
             }
 
-        } 
-        catch (error) {
+        } catch (error) {
             console.log(error)
-        } 
-        finally{
+        } finally{
             setCargando(false)
         }
             

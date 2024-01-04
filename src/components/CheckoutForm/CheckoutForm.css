@@ -1,0 +1,45 @@
+
+
+.form{
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    height: auto;
+    margin: auto;
+    color: #999;
+    padding: 10px;
+    font-size: 0.8em;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    
+}
+
+label{
+    color: #283629;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    
+}
+
+input, textarea{
+    padding: 17px 25px;
+    border-radius: 25px;
+    margin: 20px;
+    background-color: #EDFFF0;
+    border: 2px solid #F0FAF1;
+    color: #283629;
+    outline: none;
+}
+
+.boton{
+    display: flex;
+    justify-content: center;
+}

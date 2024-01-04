@@ -1,0 +1,15 @@
+
+
+.carrito{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    background-color:  #ebeca5bd;
+}
+
+h3{
+    margin-top: 20px;
+    font-weight: 600;
+    background-color:#ebeca5bd ;
+}

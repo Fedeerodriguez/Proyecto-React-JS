@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./CheckoutForm.css"
 
 
 
@@ -7,8 +8,8 @@ const CheckoutForm = ({ onConfirmado }) =>{
     const [ telefono , setTelefono ] = useState('')
     const [ email , setEmail ] = useState('')
 
-    const handleConfirmado = (Event) =>{
-        Event.preventDefault()
+    const handleConfirmado = (event) =>{
+        event.preventDefault()
 
         const userData = {
             nombre, telefono , email
@@ -18,23 +19,26 @@ const CheckoutForm = ({ onConfirmado }) =>{
     }
 
     return(
-        <div>
-            <form onSubmit={handleConfirmado}>
-                <label>
-                    Nombre
-                    <input type="text" value={nombre} onChange={({target}) => setNombre(target.value)}/>
-                </label>
-                <label>
-                    Telefono
-                    <input type="text" value={telefono} onChange={({target}) => setTelefono(target.value)}/>
-                </label>
-                <label>
-                    Email
-                    <input type="email" value={email} onChange={({target}) => setEmail(target.value)}/>
-                </label>
-                <div>
-                    <button type="submit" className="button" >Crear Orden </button>
+        <div className="contenedor">
+            <form onSubmit={handleConfirmado} className="form">
+                <div className="input-group">
+                    <label >
+                        Nombre
+                    <input className="inputs" type="text" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
+                    </label>
+                    <label >
+                        Telefono
+                        <input className="inputs" type="text" value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
+                    </label>
+                    <label >
+                        Email
+                    <input className="inputs" type="email" value={email} onChange={(e) => setEmail(e.target.value)}/>
+                    </label>
+                    <div className="boton">
+                        <button  type="submit" className="button" >Crear Orden </button>
+                    </div>
                 </div>
+               
             </form>
         </div>
     )
