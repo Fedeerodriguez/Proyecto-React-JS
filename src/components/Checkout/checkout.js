@@ -21,7 +21,7 @@ const Checkout = () =>{
                 buyer: {
                     nombre,telefono,email
                 },
-                items : cart,
+                Items : cart,
                 total : totalPrecio,
                 date : Timestamp.fromDate(new Date())
             }
@@ -29,7 +29,7 @@ const Checkout = () =>{
 
             const outOfStock = []
 
-            const ids = cart.map(prod=>prod.id)
+            const ids = cart.map(prod=> prod.id)
 
             const productosRef = collection(db, "Items")
 
@@ -53,7 +53,7 @@ const Checkout = () =>{
             if(outOfStock.length === 0 ){
                 await batch.commit()
 
-                const ordenRef = collection(db,"orders")
+                const ordenRef = collection(db,"orden")
                 const orderAdded = await addDoc(ordenRef, objOrden)
 
                 setOrdenId(orderAdded.id)
@@ -62,11 +62,15 @@ const Checkout = () =>{
                 console.error("hay productos fuera de stock")
             }
 
-        } catch (error) {
+        } 
+        catch (error) {
             console.log(error)
-        } finally {
+        } 
+        finally{
             setCargando(false)
         }
+            
+        
     }
  
 
