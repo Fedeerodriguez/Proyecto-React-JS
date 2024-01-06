@@ -3,13 +3,14 @@ import "./CheckoutForm.css"
 
 
 
+
 const CheckoutForm = ({ onConfirmado }) =>{
     const [ nombre , setNombre ] = useState('')
     const [ telefono , setTelefono ] = useState('')
     const [ email , setEmail ] = useState('')
 
-    const handleConfirmado = (event) =>{
-        event.preventDefault()
+    const handleConfirmado = (e) =>{
+        e.preventDefault()
 
         const userData = {
             nombre, telefono , email

@@ -10,12 +10,12 @@ import { useParams } from "react-router-dom"
 
 const ItemDetailContainer = () =>{
     const [productos, setProductos] = useState(null)
-    const [ cargando , setCargando ] = useState(true)
+    
 
     const {itemId} = useParams()
 
     useEffect(() =>{
-        setCargando(true)
+        
 
         const docRef = doc(db, "Items", itemId)
 
@@ -28,11 +28,10 @@ const ItemDetailContainer = () =>{
             .catch(error =>{
                 console.log(error)
             })
-            .finally(()=>{
-                setCargando(false)
-            })
+
 
     }, [itemId])
+
 
     return(
         <div className="ItemDetailContainer">

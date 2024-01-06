@@ -7,12 +7,11 @@ import { db} from "../config/firebaseConfig"
 
 const ItemListContainer = ({ mensaje }) => {
     const [productos, setProductos] = useState([])
-    const [ cargando, setCargando ] = useState(true)
 
     const {categoriaId}= useParams()
 
     useEffect(() =>{
-        setCargando(true)
+       
 
         const collectionRef = categoriaId
             ? query(collection(db, "Items"),where("categoria", "==",categoriaId ))
@@ -29,9 +28,7 @@ const ItemListContainer = ({ mensaje }) => {
             .catch(error=>{
                 console.log(error)
             })
-            .finally(()=>{
-                setCargando(false)
-            })
+            
     }, [categoriaId])
 
 
