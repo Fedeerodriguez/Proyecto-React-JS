@@ -3,7 +3,7 @@ import { CartContext } from "../Context/CartContext"
 import { Timestamp, collection, addDoc,  } from "firebase/firestore"
 import { db } from "../config/firebaseConfig"
 import CheckoutForm from "../CheckoutForm/CheckoutForm"
-
+import "./checkout.css"
 
 
 

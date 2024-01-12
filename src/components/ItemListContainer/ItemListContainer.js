@@ -18,11 +18,16 @@ const ItemListContainer = ({ mensaje }) => {
             : collection(db, "Items")
 
         getDocs(collectionRef)
-            .then(Response=>{
-                const productosAdaptados = Response.docs.map(doc=>{
+            .then((response)=>{
+
+                const productosAdaptados = response.docs.map((doc)=>{
+
                     const data = doc.data()
-                    return { id:doc.id, ...data }
+
+                    return { id: doc.id , ...data }
+
                 })
+                
                 setProductos(productosAdaptados)
             })
             .catch(error=>{
