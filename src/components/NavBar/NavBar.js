@@ -17,7 +17,7 @@ function NavBar(props) {
                <div className="column is-flex is-align-items-center ">
                 <NavLink to={`/categoria/plantas`} className="button is-danger  is-rounded mr-6">Plantas</NavLink>
                 <NavLink to={`/categoria/centro de mesas`} className="button  is-danger  is-rounded mr-6">Centros de mesas</NavLink>
-                <NavLink to={`/categoria/contacto`} className="button is-danger  is-rounded mr-6">Contacto</NavLink>
+                <NavLink to={`/contacto`} className="button is-danger  is-rounded mr-6">Contacto</NavLink>
                 </div>
                 <div className="column is-flex is-align-items-center ml-4">
                     <CartWiget/>
