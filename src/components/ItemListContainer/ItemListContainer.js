@@ -38,10 +38,10 @@ const ItemListContainer = ({ mensaje }) => {
 
 
     return(
-       <div>
+       <main>
         <h2>{mensaje}</h2>
-        <ItemList productos={productos}/>
-       </div> 
+        <ItemList  productos={productos} />
+       </main>
        
        
     )

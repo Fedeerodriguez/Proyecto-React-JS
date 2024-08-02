@@ -8,7 +8,7 @@ const CartWiget =() => {
     const { totalCantidad }= useContext(CartContext)
     return (
         <div>
-            <Link to="/cart" >
+            <Link to="/cart" className="flex items-center w-16" >
                  <GrCart/>
                  { totalCantidad() }
             </Link>

@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar/NavBar';
 import Logoimg from "./components/img/Logo-sucus.png"
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
-import "bulma/css/bulma.css"
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import { CardPovider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
@@ -12,7 +11,7 @@ import Contacto from './components/Contacto/Contacto';
 
 function App() {
   return (
-    <div className="App">
+    <div className="min-h-screen">
       <BrowserRouter>
       <CardPovider>
         <NavBar img={Logoimg} />
@@ -27,7 +26,6 @@ function App() {
         </Routes>
         </CardPovider>
       </BrowserRouter>
-
     </div>
   )
 }
