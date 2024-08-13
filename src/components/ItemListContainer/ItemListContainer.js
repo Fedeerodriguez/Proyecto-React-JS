@@ -38,7 +38,7 @@ const ItemListContainer = ({ mensaje }) => {
 
 
     return(
-       <main>
+       <main className="min-h-screen">
         <h2>{mensaje}</h2>
         <ItemList  productos={productos} />
        </main>

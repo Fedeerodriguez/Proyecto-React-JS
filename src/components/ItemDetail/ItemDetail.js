@@ -23,28 +23,24 @@ const ItemDetail = ({id,nombre,img, categoria,descripcion,precio,stock}) =>{
 
     
     return(
-        <article className="Card">
-            <header className="Header">
-                <h2 className="infoheader">{nombre}</h2>
-            </header>
-            <picture>
-                <img  src={img} alt={nombre} className="itemimg"/>
-            </picture>
-            <section>
-                <p className="info">
+        <article className="bg-lime-100 w-72 rounded-sm mt-32">
+                <img  src={img} alt={nombre} className="size-64 rounded-lg w-full"/>
+            <section className="my-2">
+                <h2 className="font-semibold ml-2">{nombre}</h2>
+                <p className="mt-4 ml-2">
                     Categoria: {categoria}
                 </p>
-                <p className="info">
+                <p className="mt-4 ml-2">
                    descripcion: {descripcion}
                 </p>
-                <p className="info">
+                <p className="mt-4 ml-2 text">
                     precio: ${precio}
                 </p>
             </section>
-            <footer className="itemFooter">
+            <footer className="flex justify-center mt-4 mb-5">
                 {
                     contadorAgregado > 0 ? (
-                        <Link to="/cart" className="opcion">Terminar compra</Link>
+                        <Link to="/cart" className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm">Terminar compra</Link>
                     ) : (
                         <ItemCount initial={1} stock={stock} onAdd={handleOnAdd}/>  
                     )

@@ -10,19 +10,21 @@ const Cart = () =>{
 
     if(totalCantidad() === 0 ){
         return(
-            <div>
+            <div className="mt-28 flex flex-col justify-center items-center ">
                 <h1>No hay items en el carrito</h1>
-                <Link to="/" className="opcion">Productos</Link>
+                <Link to="/" className="bg-blue-500 text-white px-2 py-1 ml-2 mt-2 rounded-full text-sm">Productos</Link>
             </div>
         )
     }
 
     return(
-        <div className="cart">
+        <div className="mt-32 w-[500px] m-auto h-[500px] shadow-lg rounded-md ">
             {cart.map(item => <CartItem key={item.id} item={item}/>)}
-            <h3>Total: ${totalPrecio()}</h3>
-            <button onClick={()=> clearCart()} className="button" > Limpiar carrito </button>
-            <Link to="/checkout" className="opcion">checkout</Link>
+            <h3 className="">Total: ${totalPrecio()}</h3>
+            <div className="flex justify-center mt-2">
+                <button onClick={()=> clearCart()} className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm" > Limpiar carrito </button>
+                <Link to="/checkout" className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm">checkout</Link>
+            </div>
         </div>
     )
 

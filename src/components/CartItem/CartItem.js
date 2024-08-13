@@ -9,7 +9,7 @@ const CartItem = ({ item }) =>{
 
     return(
         <div>
-            <div className="carrito">
+            <div className="grid grid-cols-4 gap-3 mt-4">
                 <h2>
                     {item.nombre}
                 </h2>  
@@ -19,7 +19,7 @@ const CartItem = ({ item }) =>{
                 <p>
                     Subtotal: {item.cantidad * item.precio}
                 </p>
-                <button className="button" onClick={()=> removeItem(item.id)}>Eliminar</button>
+                <button className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm" onClick={()=> removeItem(item.id)}>Eliminar</button>
             </div>
         </div>
     )

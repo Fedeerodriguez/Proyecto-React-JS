@@ -20,14 +20,14 @@ function ItemCount({stock, initial, onAdd}) {
     }
 
     return(
-        <div className="counter">
-            <div className="controls">
-                <button className="button" onClick={decremento}>-</button>
-                <h3>{cantidad}</h3>
-                <button className="button" onClick={incremento}>+</button>
+        <div className="flex items-center flex-col">
+            <div className="flex flex-row justify-center mb-2">
+                <button className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm" onClick={decremento}>-</button>
+                <h3 className="m-auto ml-10 mr-10">{cantidad}</h3>
+                <button className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm" onClick={incremento}>+</button>
             </div>
             <div>
-                <button className="button" onClick={()=> onAdd(cantidad)} disabled = {!stock}>Agregar al carrito</button>
+                <button className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm mt-1" onClick={()=> onAdd(cantidad)} disabled = {!stock}>Agregar al carrito</button>
             </div>
         </div>
     )

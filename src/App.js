@@ -11,7 +11,7 @@ import Contacto from './components/Contacto/Contacto';
 
 function App() {
   return (
-    <div className="min-h-screen ">
+    <div >
       <BrowserRouter>
       <CardPovider>
         <NavBar img={Logoimg} />
