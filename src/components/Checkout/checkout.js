@@ -42,11 +42,11 @@ const Checkout = () =>{
  
 
     if(cargando){
-        return <h1>Se esta generando su orden...</h1>
+        return <h1 className="mt-48 flex justify-center items-center">Se esta generando su orden...</h1>
     }
 
     if(ordenId){
-        return <h1>El id de su orden es: {ordenId}</h1>
+        return <h1 className="mt-48 flex justify-center items-center">El id de su orden es: {ordenId}</h1>
     }
 
     return(

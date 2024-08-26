@@ -5,7 +5,8 @@ import { getDocs, collection, query, where } from "firebase/firestore"
 import { db} from "../config/firebaseConfig"
 
 
-const ItemListContainer = ({ mensaje }) => {
+const ItemListContainer = ({mensaje}) => {
+
     const [productos, setProductos] = useState([])
 
     const {categoriaId}= useParams()
@@ -39,7 +40,7 @@ const ItemListContainer = ({ mensaje }) => {
 
     return(
        <main className="min-h-screen">
-        <h2>{mensaje}</h2>
+        <h2 className="mt-36 flex justify-center font-bold text-4xl">{mensaje}</h2>
         <ItemList  productos={productos} />
        </main>
        

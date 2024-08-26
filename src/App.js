@@ -16,8 +16,8 @@ function App() {
       <CardPovider>
         <NavBar img={Logoimg} />
         <Routes>
-          <Route path='/' element={<ItemListContainer/>}/>
-          <Route path='/categoria/:categoriaId' element={<ItemListContainer/>}/>
+          <Route path='/' element={<ItemListContainer mensaje="Productos"/>}/>
+          <Route path='/categoria/:categoriaId' element={<ItemListContainer />}/>
           <Route path='/Item/:itemId' element={<ItemDetailContainer/>}/>
           <Route path='/cart' element={<Cart/>}/>
           <Route path='/checkout' element={<Checkout/>}/>
