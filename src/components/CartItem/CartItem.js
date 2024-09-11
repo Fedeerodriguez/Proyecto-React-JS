@@ -9,7 +9,7 @@ const CartItem = ({ item }) =>{
 
     return(
         <div>
-            <div className="grid grid-cols-4 gap-3 mt-4">
+            <div className="flex justify-between mb-5">
                 <h2>
                     {item.nombre}
                 </h2>  

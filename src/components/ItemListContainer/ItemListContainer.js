@@ -42,6 +42,7 @@ const ItemListContainer = ({mensaje}) => {
        <main className="min-h-screen">
         <h2 className="mt-36 flex justify-center font-bold text-4xl">{mensaje}</h2>
         <ItemList  productos={productos} />
+        
        </main>
        
        

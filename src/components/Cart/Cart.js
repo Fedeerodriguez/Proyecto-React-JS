@@ -20,7 +20,7 @@ const Cart = () =>{
     return(
         <div className="mt-32 w-[500px] m-auto h-[500px] shadow-lg rounded-md ">
             {cart.map(item => <CartItem key={item.id} item={item}/>)}
-            <h3 className="">Total: ${totalPrecio()}</h3>
+            <h3 className="bg-white flex justify-center mb-4">Total: ${totalPrecio()}</h3>
             <div className="flex justify-center mt-2">
                 <button onClick={()=> clearCart()} className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm" > Limpiar carrito </button>
                 <Link to="/checkout" className="bg-blue-500 text-white px-2 py-1 ml-2 rounded-full text-sm">checkout</Link>

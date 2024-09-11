@@ -8,6 +8,7 @@ import { CardPovider } from './components/Context/CartContext';
 import Cart from './components/Cart/Cart';
 import Checkout from './components/Checkout/checkout';
 import Contacto from './components/Contacto/Contacto';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path='/contacto' element={<Contacto/>}/>
           <Route path='*' element={<h1>Error 404</h1>}/>
         </Routes>
+        <Footer img={Logoimg}/>
         </CardPovider>
       </BrowserRouter>
     </div>
