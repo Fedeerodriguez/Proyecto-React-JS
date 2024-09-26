@@ -8,12 +8,12 @@ const Contacto = ()=>{
     const [ cargando, setCargando ]= useState(false)
     const [ enviar, setEnviar ] = useState("")
 
-    const CrearContacto = async ({nombre,apellido,email})=>{
+    const CrearContacto = async ({nombre,apellido,email,mensaje})=>{
         setCargando(true)
         try {
             const objEnviar = {
                 buyer: {
-                    nombre,apellido,email
+                    nombre,apellido,email,mensaje
                 },
                 data: Timestamp.fromDate(new Date())
             }

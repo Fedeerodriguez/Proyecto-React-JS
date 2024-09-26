@@ -7,7 +7,7 @@ export default function Footer(props) {
 
   const {img} = props
   return (
-    <footer className='w-100 bg-[#0a141d] mt-8'>
+    <footer className='w-100 bg-[#0a141d] mt-10'>
         <div className='sm:w-100 max-w-[1542px] m-auto sm:grid sm:justify-items-center sm:grid-cols-3 sm:gap-12 sm:pt-11 sm:px-0  grid grid-cols-1 justify-items-center pt-8'>
             <div>
                 <figure className='w-100 h-100 flex justify-center items-center'>

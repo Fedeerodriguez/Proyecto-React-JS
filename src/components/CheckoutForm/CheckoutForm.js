@@ -21,7 +21,7 @@ const CheckoutForm = ({ onConfirmado }) =>{
     }
 
     return(
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center h-[600px]">
             <form onSubmit={handleConfirmado} className="w-96 p-6 mt-5 bg-cyan-600 rounded-md">
                 <h1 className="text-3xl  text-center font-semibold flex items-center justify-center"><IoPerson className="mr-1" />Checkout</h1>
                 <hr className="mt-3"/>
